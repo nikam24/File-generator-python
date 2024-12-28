@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  python-app:
+    build:
+      context: .  # Docker will build the container from the current directory
+    environment:
+      - PYTHONUNBUFFERED=1  # Ensures logs are shown immediately without buffering
+    command: >
+      sh -c "python main.py && python cleanup.py && tail -f /dev/null"  # Run main.py, then cleanup.py, and keep the container running
+
+# Uncomment and modify the volume section if you want to mount a directory from your host machine
+# volumes:
+#   - .:/app  # This mounts the current directory to the /app directory in the container

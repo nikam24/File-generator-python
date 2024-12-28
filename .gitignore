@@ -1,0 +1,27 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__
+
+# Ignore virtual environments
+env/
+.env/
+
+# Ignore log files
+*.log
+
+# Ignore build and distribution files
+build/
+dist/
+*.egg-info
+
+# Ignore Docker-related files
+# *.dockerfile
+# docker-compose.override.yml
+
+# Ignore IDE/editor-specific files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Ignore any other large or unnecessary files (you can add more)
+generated_files/
